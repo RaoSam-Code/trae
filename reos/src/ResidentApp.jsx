@@ -50,6 +50,10 @@ function ResidentApp() {
     handleSensorTrigger,
   )
 
+  // Simulation controls for demo purposes
+  const simulateVoice = () => handleSensorTrigger('voice')
+  const simulateFall = () => handleSensorTrigger('fall')
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <div className="mx-auto flex max-w-xl flex-col gap-6 px-4 py-8">
@@ -64,6 +68,27 @@ function ResidentApp() {
             Hold your phone nearby. Voice and fall detection stay armed in the background.
           </p>
         </header>
+
+        {/* Demo / Simulation Panel - Visible only for easy testing */}
+        <section className="rounded-lg border border-yellow-500/20 bg-yellow-900/10 p-3">
+          <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-yellow-500">
+            Demo Simulation Controls
+          </p>
+          <div className="flex gap-2">
+            <button 
+              onClick={simulateVoice}
+              className="flex-1 rounded border border-yellow-700/50 bg-yellow-900/20 px-3 py-2 text-xs font-medium text-yellow-200 hover:bg-yellow-900/40"
+            >
+              Simulate Voice "HELP!"
+            </button>
+            <button 
+              onClick={simulateFall}
+              className="flex-1 rounded border border-yellow-700/50 bg-yellow-900/20 px-3 py-2 text-xs font-medium text-yellow-200 hover:bg-yellow-900/40"
+            >
+              Simulate Fall (Drop)
+            </button>
+          </div>
+        </section>
 
         <CommunityFeed />
 

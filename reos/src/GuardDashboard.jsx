@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { ActivitySquare, BellRing } from 'lucide-react'
+import { ActivitySquare, BellRing, RefreshCw } from 'lucide-react'
 import BuildingGrid from './components/BuildingGrid.jsx'
 import AlertLog from './components/AlertLog.jsx'
 import AIAlertSummary from './components/AIAlertSummary.jsx'
@@ -7,7 +7,7 @@ import CommunicationLog from './components/CommunicationLog.jsx'
 import { useEmergencySystem } from './hooks/useEmergencySystem.js'
 
 function GuardDashboard() {
-  const { alerts, activeAlerts, resolveAlert } = useEmergencySystem()
+  const { alerts, activeAlerts, resolveAlert, isDemoMode, resetDemo } = useEmergencySystem()
   const audioRef = useRef(null)
   const previousCountRef = useRef(0)
 
@@ -42,10 +42,20 @@ function GuardDashboard() {
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/80 px-3 py-1">
-              <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
-              <span className="text-[11px] font-mono uppercase tracking-widest text-emerald-300">
-                Link online
+            {isDemoMode && (
+              <button 
+                onClick={resetDemo}
+                title="Reset Demo Data"
+                className="flex items-center gap-1 rounded border border-slate-700 bg-slate-900/50 px-2 py-1 text-[10px] text-slate-400 hover:bg-slate-800 hover:text-white"
+              >
+                <RefreshCw className="h-3 w-3" />
+                RESET
+              </button>
+            )}
+            <div className={`flex items-center gap-2 rounded-full border px-3 py-1 ${isDemoMode ? 'border-yellow-500/30 bg-yellow-900/20' : 'border-slate-700 bg-slate-900/80'}`}>
+              <span className={`inline-flex h-2 w-2 rounded-full shadow-[0_0_12px_rgba(52,211,153,0.9)] ${isDemoMode ? 'bg-yellow-400' : 'bg-emerald-400'}`} />
+              <span className={`text-[11px] font-mono uppercase tracking-widest ${isDemoMode ? 'text-yellow-300' : 'text-emerald-300'}`}>
+                {isDemoMode ? 'DEMO MODE' : 'LINK ONLINE'}
               </span>
             </div>
             <div className="flex items-center gap-1 text-xs text-slate-500">
