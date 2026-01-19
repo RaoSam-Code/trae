@@ -1,7 +1,7 @@
 <div align="center">
 
-# 🛡️ R.E.O.S.
-### RESILIENT ENCLAVE OPERATING SYSTEM
+# 🛡️ A.E.G.I.S
+### AUTONOMUS EMERGENCY GUARD & INTELLIGENT SYSTEM
 **"When the Internet Dies, We Rise."**
 
 [![System Status](https://img.shields.io/badge/SYSTEM-ONLINE-00ff00?style=for-the-badge&logo=terminator&logoColor=black)](https://github.com/RaoSam-Code/trae)
