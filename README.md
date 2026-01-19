@@ -47,6 +47,30 @@
 
 ---
 
+
+
+## 🎬 HACKATHON DEMO PROTOCOL
+
+| Step | Action | Visual Feedback |
+| :--- | :--- | :--- |
+| **01** | **Activate System** | Open `Resident App` (Mobile) & `Guard Dashboard` (Desktop). |
+| **02** | **Trigger Mesh** | Turn OFF Internet Toggle. Watch the **Mesh Visualizer** light up. |
+| **03** | **Fire Test** | Show **Red Cloth/Fire** to Webcam running `python main.py`. |
+| **04** | **Real-time Alert** | **Guard Dashboard** flashes RED. Siren sounds. Evidence received. |
+| **05** | **Evacuate** | Click **Footprints Icon**. Follow AR Arrows to safety. |
+
+---
+
+<div align="center">
+
+**Built for Humanity.**
+*Use Tech to Protect.*
+
+[![Repo Size](https://img.shields.io/github/repo-size/RaoSam-Code/trae?color=cyan&style=flat-square)](https://github.com/RaoSam-Code/trae)
+[![License](https://img.shields.io/badge/license-MIT-white?style=flat-square)](LICENSE)
+
+</div>
+
 ## 💻 INSTALLATION & DEPLOYMENT
 
 ### 1️⃣ Clone the Enclave
@@ -71,25 +95,3 @@ python main.py
 ```
 
 ---
-
-## 🎬 HACKATHON DEMO PROTOCOL
-
-| Step | Action | Visual Feedback |
-| :--- | :--- | :--- |
-| **01** | **Activate System** | Open `Resident App` (Mobile) & `Guard Dashboard` (Desktop). |
-| **02** | **Trigger Mesh** | Turn OFF Internet Toggle. Watch the **Mesh Visualizer** light up. |
-| **03** | **Fire Test** | Show **Red Cloth/Fire** to Webcam running `python main.py`. |
-| **04** | **Real-time Alert** | **Guard Dashboard** flashes RED. Siren sounds. Evidence received. |
-| **05** | **Evacuate** | Click **Footprints Icon**. Follow AR Arrows to safety. |
-
----
-
-<div align="center">
-
-**Built for Humanity.**
-*Use Tech to Protect.*
-
-[![Repo Size](https://img.shields.io/github/repo-size/RaoSam-Code/trae?color=cyan&style=flat-square)](https://github.com/RaoSam-Code/trae)
-[![License](https://img.shields.io/badge/license-MIT-white?style=flat-square)](LICENSE)
-
-</div>
